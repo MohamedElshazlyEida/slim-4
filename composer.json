@@ -1,0 +1,19 @@
+{
+    "name": "slim/test",
+    "description": "....",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mohamed elshazly",
+            "email": "mohamed.elshazly.hefny@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "dev-master",
+        "php-di/php-di": "v7.x-dev",
+        "jenssegers/blade": "^1.2"
+    }
+}
