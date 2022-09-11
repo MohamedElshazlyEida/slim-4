@@ -153,6 +153,9 @@ hostname: slim-4
 15. Once ssh'd into your virtual machine, run
 ```
 cd code && cp .env.example .env && composer install && npm install
+mysql -u homestead -p
+secret
+CREATE DATABASE slim;
 ```
 
 ===
