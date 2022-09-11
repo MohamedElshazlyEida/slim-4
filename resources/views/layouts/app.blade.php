@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slim test </title>
-</head>
-<body>
-    <h1>hello world</h1>
-    @yield('content')
-</body>
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Slim 4 Authentication
+        </title>
+
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+    <body>
+        <div id="app">
+            @include('sections.navigation.top')
+
+            @include('sections.flash.messages')
+
+            <div id="content">
+                @yield('content')
+            </div>
+        </div>
+
+        <script src="{{ asset('js/main.js') }}"></script>
+    </body>
 </html>
