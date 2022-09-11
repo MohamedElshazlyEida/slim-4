@@ -28,6 +28,7 @@ coherent manner that can be reflected in the code you provide.
 # to run project
 ```
 composer install
+composer dumpautoload -o
 cd public
 php -S localhost:8888
 ```
