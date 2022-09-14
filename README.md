@@ -25,11 +25,7 @@ coherent manner that can be reflected in the code you provide.
 3. Validation
 4. Security Considerations
 5. Database optimization for performance.
-# to run project
-```
-composer install  --ignore-platform-reqs
-composer dumpautoload -o
-```
+
 ## Documentation Sections
  - [Installation](https://github.com/MohamedElshazlyEida/slim-4#installation)
  - [Console Commands](https://github.com/MohamedElshazlyEida/slim-4#list-slim-console-commands)
