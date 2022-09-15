@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\User;
 use App\Support\RequestInput;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 
-class UserControllerController
+class UserController
 {
     public function index($response, User $user)
     {
@@ -22,7 +23,7 @@ class UserControllerController
         return $response;
     }
 
-    public function create( CreateUserRequest $request)
+    public function create($response ,CreateUserRequest $request)
     {
         if ($request->failed()) return $response->getBody()->write(json_encode($request->errors(), JSON_PRETTY_PRINT));
         $user = User::forceCreate($request->all());
@@ -30,17 +31,22 @@ class UserControllerController
         return $response;
     }
 
-    public function update()
+    public function update($response ,UpdateUserRequest $input)
     {
-        // $model = Model::find($input->id);
-        // $model->update($input->all();
-        // return redirect('/index');
+        $response = User::find($input->id);
+        $response->update($input->all());
+        $response->getBody()->write(json_encode($user, JSON_PRETTY_PRINT));
+        return $response;
     }
 
-    public function destroy($id)
+    public function destroy($response, $id)
     {
         // $model = Model::find($id);
         //
         // $model->delete();
+        $user = User::findOrFail($id);
+        $user->delete();
+        $response->getBody()->write(json_encode('user deleted', JSON_PRETTY_PRINT));
+        return $response;
     }
 }
