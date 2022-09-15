@@ -16,7 +16,7 @@ Route::get('/login', 'LoginController@form')->add(RedirectIfAuthenticated::class
 Route::post('/login', 'LoginController@login')->add(RedirectIfAuthenticated::class);
 
 Route::get('/register', 'RegisterController@form')->add(RedirectIfAuthenticated::class);
-Route::post('/register', 'RegisterController@store')->add(RedirectIfAuthenticated::class);
+Route::post('/register', 'RegisterController@register')->add(RedirectIfAuthenticated::class);
 
 Route::get('/reset-password', 'ResetPasswordController@send')->add(RedirectIfAuthenticated::class);
 Route::post('/reset-password', 'ResetPasswordController@store')->add(RedirectIfAuthenticated::class);

@@ -15,4 +15,5 @@ class User extends Model
     protected $guarded = [
         'password'
     ];
+    protected $hidden = ['password'];
 }
